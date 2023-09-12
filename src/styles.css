@@ -151,7 +151,7 @@ h6,
 }
 
 .navbar-light .navbar-brand h1 {
-    color: #FFFFFF;
+    color: #000000;
 }
 
 .navbar-light .navbar-brand img {
@@ -232,11 +232,21 @@ h6,
 }
 .navbar {
     position: sticky;
-    background:  url(assets/img/Flag_Header.jpg);
+    /* background:  url(assets/img/Flag_Header.jpg); */
     background-size: cover;
     width: 100%;
     height: 100%;
     /* opacity: 1; */
+    &::before {  
+        content: "";
+        background-image: url(assets/img/Flag_Header.jpg);
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+    }
 }
 
 /*** Carousel ***/
@@ -1225,4 +1235,7 @@ svg#clouds {
         display: none;
         visibility: hidden;
     }
+}
+.bg-light {
+    background-color: #EEF9FF !important;
 }

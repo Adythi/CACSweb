@@ -1,89 +1,107 @@
 <!-- <router-outlet></router-outlet> -->
 <div class="container-fluid position-relative p-0">
   <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="" class="navbar-brand p-0">
+    <!-- <a href="" class="navbar-brand p-0">
       <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
 
-    </a>
+    </a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
       <span class="fa fa-bars"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto py-0">
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Home</a>
-          <div class="dropdown-menu m-0">
-            <a href="index-1.html" class="dropdown-item active">Home 1</a>
-            <a href="index-2.html" class="dropdown-item">Home 2</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
-          <div class="dropdown-menu m-0">
-            <a href="about-1.html" class="dropdown-item">About 1</a>
-            <a href="about-2.html" class="dropdown-item">About 2</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
-          <div class="dropdown-menu m-0">
-            <a href="service-1.html" class="dropdown-item">Service 1</a>
-            <a href="service-2.html" class="dropdown-item">Service 2</a>
-            <a href="service-3.html" class="dropdown-item">Service 3</a>
-            <a href="service-detail.html" class="dropdown-item">Service Detail</a>
-          </div>
-        </div>
-        <div class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-          <div class="dropdown-menu m-0">
-            <a href="price-1.html" class="dropdown-item">Price Page 1</a>
-            <a href="price-2.html" class="dropdown-item">Price Page 2</a>
-            <a href="project.html" class="dropdown-item">Project Page</a>
-            <a href="project-detail.html" class="dropdown-item">Project Detail</a>
-            <a href="blog.html" class="dropdown-item">Blog Page</a>
-            <a href="blog-detail.html" class="dropdown-item">Blog Detail</a>
-            <a href="faq.html" class="dropdown-item">FAQs Page</a>
-            <a href="team.html" class="dropdown-item">Team Page</a>
-            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-            <a href="404.html" class="dropdown-item">404 Page</a>
-          </div>
-        </div>
-        <a href="elements.html" class="nav-item nav-link">Elements</a>
-        <a href="contact.html" class="nav-item nav-link">Contact</a>
-      </div>
-      <button type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i
-          class="fa fa-search"></i></button>
-      <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-3 ms-3">Purchase
-        Now</a>
+        <a href="#" class="nav-link nav-item active" data-bs-toggle="dropdown">Home</a>
+        <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+          (keypress)="about()" class="nav-link nav-item">About</a>
+
+        <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
+          (keypress)="services()" class="nav-link nav-item">Service</a>
+        <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+          (keypress)="contact()" class="nav-link nav-item">Contact US</a>
+
     </div>
-  </nav>
-  <ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="Random first slide" />
+</div>
+</nav>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide" />
+    </div>
+    <div class="carousel-caption">
+      <h1>Command and Control Solutions</h1>
+      <h3>A service disabled veteran owned business</h3>
+      <h3>We are in command of your environment and in control of your infrastructure.</h3>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide" />
+    </div>
+    <div class="carousel-caption">
+      <h1>Command and Control Solutions</h1>
+      <span>
+        <h3><i class="fas fa-check-square"></i> EXPERIENCED <i class="fas fa-check-square" style="margin-left: 2%;"></i>
+          KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
+          RESPONSIVE</h3>
+      </span>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="container-fluid py-5" id="about">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <div class="section-title-1 position-relative pb-3 mb-5">
+          <h1 class="text-primary text-uppercase">About Us</h1>
+          <h2 class="mb-0">The Best IT Solution With 10 Years of Experience</h2>
+        </div>
+        <p class="mb-4">At Command and Control Solutions Corp., based in New York's Tech Valley, we're
+          pioneers in delivering innovative and strategic technology services and solutions.
+          Focusing on reliability, security, and cost-effectiveness, and with a diverse client
+          base spanning small businesses to federal enterprises, our broad spectrum of
+          services, from executive consulting and IT strategy alignment to advanced
+          cybersecurity and infrastructure management, have provided outstanding results
+          for over thirteen years. Underpinned by a team of highly-skilled professionals
+          and led by our CEO and COO executive leaders, both US Military Academy West
+          Point graduates, we're committed to transparent, flawless excellence in project
+          execution and outstanding customer satisfaction. Entrust us to be your partner in
+          command of your technology solution and control of your IT infrastructure.</p>
+        <div class="row g-0 mb-3">
+          <div class="col-sm-6">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+          </div>
+          <div class="col-sm-6 ">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
+          </div>
+        </div>
+        <div class="d-flex align-items-center mb-4">
+          <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+            style="width: 60px; height: 60px;">
+            <i class="fa fa-phone-alt text-white"></i>
+          </div>
+          <div class="ps-4">
+            <h5 class="mb-2">Call to ask any question</h5>
+            <h4 class="text-primary mb-0">(518) 229-5770 or (888) 688-0440</h4>
+          </div>
+        </div>
       </div>
-      <div class="carousel-caption">
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      <div class="col-lg-5" style="min-height: 500px;">
+        <div class="position-relative h-100">
+          <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
+        </div>
       </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[1]" alt="Random second slide" />
-      </div>
-      <div class="carousel-caption">
-        <h3>Second slide label</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[2]" alt="Random third slide" />
-      </div>
-      <div class="carousel-caption">
-        <h3>Third slide label</h3>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </ng-template>
-  </ngb-carousel>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-5" id="services">
+  <div class="container py-5">
+    <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h2 class="text-primary text-uppercase">Our Services</h2>
+      <h3 class="mb-0">Custom IT Solutions for Your Successful Business</h3>
+    </div>
+    <app-cards></app-cards>
+  </div>
+</div>
 </div>

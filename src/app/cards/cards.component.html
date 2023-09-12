@@ -1,0 +1,41 @@
+<div class="row g-5">
+    <div class="col-lg-4 col-md-6">
+        <div
+            class="card h-100 w-100 service-item bg-light flex-column">
+            <div class="service-icon">
+                <i class="fa fa-shield-alt text-white"></i>
+            </div>
+            <h4 class="mb-3">Information Technology and Security</h4>
+            <ul class="m-0">
+                <li *ngFor="let i of itList | slice:0:(moreIT? undefined: 3)">{{i}}</li>
+            </ul>
+            <button class="btn text-primary" (click)="moreIT =!moreIT" *ngIf="itList.length>3">{{moreIT? 'less':'more'}}</button>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div
+            class="card h-100 w-100 service-item bg-light flex-column">
+            <div class="service-icon">
+                <i class="fa fa-chart-pie text-white"></i>
+            </div>
+            <h4 class="mb-3">Data Management and Analytics</h4>
+            <ul class="m-0">
+                <li *ngFor="let i of daLists | slice:0:(moreDA? undefined: 3)">{{i}}</li>
+            </ul>
+            <button class="btn text-primary" (click)="moreDA =!moreDA" *ngIf="daLists.length>3">{{moreDA? 'less':'more'}}</button>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <div
+            class="card h-100 w-100 service-item bg-light flex-column">
+            <div class="service-icon">
+                <i class="fa fa-chart-pie text-white"></i>
+            </div>
+            <h4 class="mb-3">Business Improvement and Systems</h4>
+            <ul class="m-0">
+                <li *ngFor="let i of bisList | slice:0:(moreBIS? undefined: 3)">{{i}}</li>
+            </ul>
+            <button  class="btn text-primary" (click)="moreBIS =!moreBIS" *ngIf="bisList.length>3">{{moreBIS? 'less':'more'}}</button>
+        </div>
+    </div>
+</div>
