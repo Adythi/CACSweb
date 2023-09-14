@@ -8,12 +8,14 @@ import { CardsComponent } from './cards/cards.component';
 import { GrowthComponent } from './growth/growth.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DifferentiatorsComponent } from './differentiators/differentiators.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardsComponent,
-    GrowthComponent
+    GrowthComponent,
+    DifferentiatorsComponent
   ],
   imports: [
     BrowserModule,

@@ -27,28 +27,29 @@
     </div>
   </div>
   <div class="container-fluid position-relative p-0">
-  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" [ngClass]="{'sticky-top shadow-sm':stickNavBar}" #header>
-    <a href="" class="navbar-brand p-0">
-      <h1 class="m-0"><img src="assets/img/logo-cacs.png"> CACS</h1>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-      <span class="fa fa-bars"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav ms-auto py-0">
-        <a href="#" class="nav-link nav-item active" data-bs-toggle="dropdown">Home</a>
-        <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
-          (keypress)="about()" class="nav-link nav-item">About</a>
-
-        <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
-          (keypress)="services()" class="nav-link nav-item">Service</a>
-        <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
-          (keypress)="contact()" class="nav-link nav-item">Contact Us</a>
-
+    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+      [ngClass]="{'sticky-top shadow-sm':stickNavBar}" #header>
+      <a href="" class="navbar-brand p-0">
+        <h1 class="m-0"><img src="assets/img/logo-cacs.png"> CACS</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="fa fa-bars"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto py-0">
+          <a href="#" class="nav-link nav-item active" data-bs-toggle="dropdown">Home</a>
+          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+            (keypress)="about()" class="nav-link nav-item">About</a>
+  
+          <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
+            (keypress)="services()" class="nav-link nav-item">Service</a>
+          <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+            (keypress)="contact()" class="nav-link nav-item">Contact Us</a>
+  
+        </div>
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
   <ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
@@ -67,8 +68,7 @@
       <div class="carousel-caption">
         <h1>Command and Control Solutions</h1>
         <span>
-          <h3><i class="fas fa-check-square"></i> EXPERIENCED <i class="fas fa-check-square"
-              style="margin-left: 2%;"></i>
+          <h3><i class="fas fa-check-square"></i> EXPERIENCED <i class="fas fa-check-square" style="margin-left: 2%;"></i>
             KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
             RESPONSIVE</h3>
         </span>
@@ -142,5 +142,88 @@
       <app-growth></app-growth>
     </div>
   </div>
-
-<!-- </div> -->
+  <hr class="mx-auto">
+  <div class="container-fluid py-5 ">
+    <div class="container py-5">
+      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h1 class="fw-bold text-primary text-uppercase">What makes us unique?</h1>
+      </div>
+      <app-differentiators></app-differentiators>
+    </div>
+  </div>
+  <hr class="mx-auto">
+  <div class="container-fluid py-5 ">
+    <div class="container py-5">
+      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h1 class="fw-bold text-primary text-uppercase">Past Performance</h1>
+      </div>
+      <div class="container story position-relative">
+        <div class="row mb-5 ">
+          <div class="col-12 text-md-center">
+            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Now</div>
+          </div>
+        </div>
+        <div class="row gx-5 story-right position-relative mb-5 ">
+          <div class="col-md-6 text-md-end">
+            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[0].years}}</h6>
+          </div>
+          <div class="col-md-6">
+            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+              <h4><img class="img-fluid rounded" src="{{pastperformance[0].images}}" style="width: 60px; height: 60px;">{{pastperformance[0].heading}}</h4>
+              <p class="m-0"><b>VALUE: </b>{{pastperformance[0].value}}</p>
+              <p class="m-0">{{pastperformance[0].details}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-5 story-left position-relative mb-5 ">
+          <div class="col-md-6 text-md-end">
+            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+              <h4>
+                <img class="img-fluid rounded" src="{{pastperformance[1].images}}" style="width: 60px; height: 60px;float: right;margin-left: 2%;">{{pastperformance[1].heading}}</h4>
+              <p class="m-0"><b>VALUE: </b>{{pastperformance[1].value}}</p>
+              <p class="m-0">{{pastperformance[1].details}}</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-block">
+            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[1].years}}</h6>
+          </div>
+        </div>
+        <!-- <div class="row mb-5 ">
+          <div class="col-12 text-md-center">
+            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">2020</div>
+          </div>
+        </div> -->
+        <div class="row gx-5 story-right position-relative mb-5 ">
+          <div class="col-md-6 text-md-end">
+            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[2].years}}</h6>
+          </div>
+          <div class="col-md-6">
+            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0"> 
+              <h4><img class="img-fluid rounded" src="{{pastperformance[2].images}}" style="width: 60px; height: 60px; margin-right: 2%;">{{pastperformance[2].heading}}</h4>
+              <p class="m-0"><b>VALUE: </b>{{pastperformance[2].value}}</p>
+              <p class="m-0">{{pastperformance[2].details}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row gx-5 story-left position-relative mb-5 ">
+          <div class="col-md-6 text-md-end">
+            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+              <h4><img class="img-fluid rounded" src="{{pastperformance[3].images}}" style="width: 60px; height: 60px; float: right;margin-left: 2%;">{{pastperformance[3].heading}}</h4>
+              <p class="m-0"><b>VALUE: </b>{{pastperformance[3].value}}</p>
+              <p class="m-0">{{pastperformance[3].details}}</p>
+            </div>
+          </div>
+          <div class="col-md-6 d-none d-md-block">
+            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[3].years}}</h6>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12 text-md-center">
+            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Launched</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <!-- </div> -->

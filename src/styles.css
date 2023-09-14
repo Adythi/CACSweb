@@ -133,7 +133,7 @@ h6,
     position: sticky;
     margin-left: 25px;
     padding: 35px 0;
-    color: black!important;
+    color: #fff!important;
     font-size: 18px;
     font-weight: 600;
     outline: none;
@@ -151,7 +151,7 @@ h6,
 }
 
 .navbar-light .navbar-brand h1 {
-    color: #000000;
+    color: #fff;
 }
 
 .navbar-light .navbar-brand img {
