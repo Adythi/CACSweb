@@ -10,9 +10,10 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent {
   title = 'CACS';
-  images = ['../assets/img/carousel-1.jpg', '../assets/img/carousel-2.png'];
+  images = ['assets/img/carousel-1.jpg', 'assets/img/carousel-2.png'];
   observer: Subscription;
   pathParams: any;
+  stickNavBar:boolean=false;
   constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
     this.observer = this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -46,9 +47,11 @@ export class AppComponent {
   onWindowScroll() {
     if (document.body.scrollTop > 45 ||     
     document.documentElement.scrollTop > 45) {
-     document.getElementById('header')?.classList.add('sticky-top shadow-sm');
+      this.stickNavBar=true;
+     //document.getElementById('header')?.classList.add('sticky-top shadow-sm');
     } else {
-      document.getElementById('header')?.classList.remove('sticky-top shadow-sm');
+      this.stickNavBar=false;
+      //document.getElementById('header')?.classList.remove('sticky-top shadow-sm');
     }
   }
 }

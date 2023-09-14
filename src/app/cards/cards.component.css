@@ -14,7 +14,7 @@
     position: relative;
 }
 .card-content-wrapper {
-    position: absolute;
+    /* position: absolute; */
     background: rgb(26 40 63 / 87%);
     z-index: 1;
     color: #fff;
@@ -34,4 +34,8 @@
 
 .card-content-wrapper2 ul {
     text-align: left;
+}
+.wrapperLayout{
+    width: 108% !important;
+    padding: 0;
 }

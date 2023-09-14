@@ -19,7 +19,7 @@ export class GrowthComponent {
   pastperformance = [
     {
       "id":"1",
-      "images": "../../assets/img/opm.jpeg",
+      "images": "assets/img/opm.jpeg",
       "heading": "Office of Personnel Management",
       "years": "2023-2028",
       "value": "$20M ($5M / Yr)",
@@ -27,7 +27,7 @@ export class GrowthComponent {
     },
     {
       "id":"2",
-      "images": "../../assets/img/NY-wellfaremgmt.png",
+      "images": "assets/img/NY-wellfaremgmt.png",
       "heading": "New York State | Wellfare Mgmt. / Child Support Systems",
       "years": "2021-2023",
       "value": "$1,200,000",
@@ -40,7 +40,7 @@ export class GrowthComponent {
     },
     {
       "id":"3",
-      "images": "../../assets/img/NY-wellfaremgmt.png",
+      "images": "assets/img/NY-wellfaremgmt.png",
       "heading": "New York State | ITS Integrated Eligibility System (IES)",
       "years": "2021-Current (Likely Extension)",
       "value": "$1,250,000",
@@ -52,7 +52,7 @@ export class GrowthComponent {
     },
     {
       "id":"4",
-      "images": "../../assets/img/NY-wellfaremgmt.png",
+      "images": "assets/img/NY-wellfaremgmt.png",
       "heading": "New York State | OGS Benefit Administration",
       "years": "2017-2018",
       "value": "$100,000",
