@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent {
   title = 'CACS';
-  images = ['../assets/img/carousel-1.jpg', '../assets/img/carousel-2.png'];
+  images = ['assets/img/carousel-1.jpg', 'assets/img/carousel-2.png'];
   observer: Subscription;
   pathParams: any;
   constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
