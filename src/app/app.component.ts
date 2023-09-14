@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, HostListener, Inject } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -12,7 +13,7 @@ export class AppComponent {
   images = ['../assets/img/carousel-1.jpg', '../assets/img/carousel-2.png'];
   observer: Subscription;
   pathParams: any;
-  constructor(private router: Router) {
+  constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
     this.observer = this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
@@ -40,5 +41,14 @@ export class AppComponent {
   contact() {
     let element = document.getElementById("contact");
     element?.focus();
+  }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if (document.body.scrollTop > 45 ||     
+    document.documentElement.scrollTop > 45) {
+     document.getElementById('header')?.classList.add('sticky-top shadow-sm');
+    } else {
+      document.getElementById('header')?.classList.remove('sticky-top shadow-sm');
+    }
   }
 }

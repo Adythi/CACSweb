@@ -1,0 +1,20 @@
+<owl-carousel-o [options]="customOptions" class="testimonial-carousal" (translated)="getPassedData($event)">
+    <ng-container  *ngFor="let i of pastperformance">
+        <ng-template carouselSlide [id]="i.id">
+            <div class="slide">
+                <div class="testimonial-item bg-light my-4 h-100">
+                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
+                        <img class="img-fluid rounded" src="{{i.images}}" style="width: 60px; height: 60px;">
+                        <div class="ps-4">
+                            <h2 class="text-primary mb-1">{{i.heading}}</h2>
+                            <small class="text-uppercase"><b>Date(s): </b>{{i.years}} <b>| Value: </b>{{i.value}}</small>
+                        </div>
+                    </div>
+                    <div class="pt-4 pb-5 px-5">
+                        {{i.details}}
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ng-container>
+</owl-carousel-o>

@@ -1,0 +1,20 @@
+.owl-carousel .owl-stage{display: flex;}
+.slide {
+    display: flex;
+    flex: 1 0 auto;
+    height: 100%;
+}
+.slide {
+    position: relative;
+    overflow: hidden;
+    /* margin-bottom: 80px; *//*This is optional*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.testimonial-item {
+    transition: transform 2ms;
+}
+.testimonial-item:hover {
+    transform: scale(1.2);
+}
