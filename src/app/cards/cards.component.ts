@@ -9,6 +9,9 @@ export class CardsComponent {
   moreIT = false;
   moreDA = false;
   moreBIS = false;
+  moreIT2 = false;
+  moreDA2 = false;
+  moreBIS2 = false;
   itList = [
     "Technology Strategy",
     "IT Support Services",
