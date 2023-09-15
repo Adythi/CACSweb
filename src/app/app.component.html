@@ -62,6 +62,8 @@
             KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
             RESPONSIVE</h3>
         </span>
+        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
       </div>
     </ng-template>
     <ng-template ngbSlide>
@@ -71,7 +73,8 @@
       <div class="carousel-caption">
         <h1>Command and Control Solutions</h1>
         <h3>A service disabled veteran owned business</h3>
-        <h3>We are in command of your environment and in control of your infrastructure.</h3>
+        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
       </div>
     </ng-template>
   </ngb-carousel>
