@@ -62,8 +62,10 @@
             KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
             RESPONSIVE</h3>
         </span>
-        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
-        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+          class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+          class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
       </div>
     </ng-template>
     <ng-template ngbSlide>
@@ -73,8 +75,10 @@
       <div class="carousel-caption">
         <h1>Command and Control Solutions</h1>
         <h3>A service disabled veteran owned business</h3>
-        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
-        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+          class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+          class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
       </div>
     </ng-template>
   </ngb-carousel>
@@ -118,7 +122,7 @@
             </div>
           </div> -->
         </div>
-        <div class="col-lg-5" >
+        <div class="col-lg-5">
           <div class="position-relative h-100">
             <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
           </div>
@@ -172,7 +176,8 @@
           </div>
           <div class="col-md-6">
             <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4><img class="img-fluid rounded" src="{{pastperformance[0].images}}" style="width: 60px; height: 60px;">{{pastperformance[0].heading}}</h4>
+              <h4><img class="img-fluid rounded" src="{{pastperformance[0].images}}"
+                  style="width: 60px; height: 60px;">{{pastperformance[0].heading}}</h4>
               <p class="m-0"><b>VALUE: </b>{{pastperformance[0].value}}</p>
               <p class="m-0">{{pastperformance[0].details}}</p>
             </div>
@@ -182,7 +187,9 @@
           <div class="col-md-6 text-md-end">
             <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
               <h4>
-                <img class="img-fluid rounded" src="{{pastperformance[1].images}}" style="width: 60px; height: 60px;float: right;margin-left: 2%;">{{pastperformance[1].heading}}</h4>
+                <img class="img-fluid rounded" src="{{pastperformance[1].images}}"
+                  style="width: 60px; height: 60px;float: right;margin-left: 2%;">{{pastperformance[1].heading}}
+              </h4>
               <p class="m-0"><b>VALUE: </b>{{pastperformance[1].value}}</p>
               <p class="m-0">{{pastperformance[1].details}}</p>
             </div>
@@ -201,8 +208,9 @@
             <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[2].years}}</h6>
           </div>
           <div class="col-md-6">
-            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0"> 
-              <h4><img class="img-fluid rounded" src="{{pastperformance[2].images}}" style="width: 60px; height: 60px; margin-right: 2%;">{{pastperformance[2].heading}}</h4>
+            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+              <h4><img class="img-fluid rounded" src="{{pastperformance[2].images}}"
+                  style="width: 60px; height: 60px; margin-right: 2%;">{{pastperformance[2].heading}}</h4>
               <p class="m-0"><b>VALUE: </b>{{pastperformance[2].value}}</p>
               <p class="m-0">{{pastperformance[2].details}}</p>
             </div>
@@ -211,7 +219,8 @@
         <div class="row gx-5 story-left position-relative mb-5 ">
           <div class="col-md-6 text-md-end">
             <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4><img class="img-fluid rounded" src="{{pastperformance[3].images}}" style="width: 60px; height: 60px; float: right;margin-left: 2%;">{{pastperformance[3].heading}}</h4>
+              <h4><img class="img-fluid rounded" src="{{pastperformance[3].images}}"
+                  style="width: 60px; height: 60px; float: right;margin-left: 2%;">{{pastperformance[3].heading}}</h4>
               <p class="m-0"><b>VALUE: </b>{{pastperformance[3].value}}</p>
               <p class="m-0">{{pastperformance[3].details}}</p>
             </div>
@@ -227,6 +236,13 @@
         </div>
       </div>
     </div>
-  
-  
-    <!-- </div> -->
+  </div>
+  <hr class="mx-auto">
+  <div class="container-fluid py-5 " id="contact">
+    <div class="container py-5">
+      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h1 class="fw-bold text-primary text-uppercase">Contact Us</h1>
+      </div>
+      <app-contactus></app-contactus>
+    </div>
+  </div>
