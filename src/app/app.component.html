@@ -53,16 +53,6 @@
   <ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="Random first slide" />
-      </div>
-      <div class="carousel-caption">
-        <h1>Command and Control Solutions</h1>
-        <h3>A service disabled veteran owned business</h3>
-        <h3>We are in command of your environment and in control of your infrastructure.</h3>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
         <img [src]="images[1]" alt="Random second slide" />
       </div>
       <div class="carousel-caption">
@@ -72,6 +62,16 @@
             KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
             RESPONSIVE</h3>
         </span>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img [src]="images[0]" alt="Random first slide" />
+      </div>
+      <div class="carousel-caption">
+        <h1>Command and Control Solutions</h1>
+        <h3>A service disabled veteran owned business</h3>
+        <h3>We are in command of your environment and in control of your infrastructure.</h3>
       </div>
     </ng-template>
   </ngb-carousel>
@@ -94,13 +94,13 @@
             Point graduates, we're committed to transparent, flawless excellence in project
             execution and outstanding customer satisfaction. Entrust us to be your partner in
             command of your technology solution and control of your IT infrastructure.</p>
-          <div class="row g-0 mb-3">
+          <!-- <div class="row g-0 mb-3">
             <div class="col-sm-6">
-              <!-- <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5> -->
+              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
               <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
             </div>
             <div class="col-sm-6 ">
-              <!-- <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5> -->
+              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
               <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
             </div>
           </div>
@@ -113,9 +113,9 @@
               <h5 class="mb-2">Call to ask any question</h5>
               <h4 class="text-primary mb-0">(518) 229-5770 or (888) 688-0440</h4>
             </div>
-          </div>
+          </div> -->
         </div>
-        <div class="col-lg-5" style="min-height: 500px;">
+        <div class="col-lg-5" >
           <div class="position-relative h-100">
             <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
           </div>
