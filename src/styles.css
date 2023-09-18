@@ -1422,3 +1422,8 @@ h6 {
 .blog-item:hover .blog-img img {
     transform: scale(1.15);
 }
+.btn-primary {
+    color: #fff;
+    background-color: #06A3DA;
+    border-color: #06A3DA;
+}

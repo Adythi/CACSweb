@@ -9,6 +9,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  displayScroller = false;
   title = 'CACS';
   images = ['assets/img/carousel-1.jpg', 'assets/img/carousel-2.png'];
   pastperformance = [
@@ -61,7 +62,7 @@ export class AppComponent {
   observer: Subscription;
   pathParams: any;
   stickNavBar:boolean=false;
-  constructor(private router: Router, @Inject(DOCUMENT) private document: Document) {
+  constructor(private router: Router) {
     this.observer = this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         const url = this.router.url;
@@ -74,12 +75,27 @@ export class AppComponent {
           document.getElementById("services")?.scrollIntoView();
         } else if (event.url.includes('#contact')) {
           document.getElementById("contact")?.scrollIntoView();
+        } else if (event.url.includes('#performance')) {
+          document.getElementById("performance")?.scrollIntoView();
+        } else if (event.url.includes('#whyUs')) {
+          document.getElementById("whyUs")?.scrollIntoView();
         }
       }
     })
   }
   about() {
     let element = document.getElementById("about");
+    element?.focus();
+  }
+  whyUs() {
+    let element = document.getElementById("whyUs");
+    element?.focus();
+  }
+  scrollUp() {
+    window.scroll(0,0);
+  }
+  performance() {
+    let element = document.getElementById("performance");
     element?.focus();
   }
   services() {
@@ -97,6 +113,12 @@ export class AppComponent {
       this.stickNavBar=true;
     } else {
       this.stickNavBar=false;
+    }
+    if (document.body.scrollTop >100  ||     
+      document.documentElement.scrollTop > 100) {
+        this.displayScroller = true;
+    } else {
+      this.displayScroller = false;
     }
   }
 }

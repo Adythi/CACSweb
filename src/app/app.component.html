@@ -4,10 +4,10 @@
     <div class="row gx-0">
       <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
         <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+          <!-- <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small> -->
           <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>888.688.0440</small>
           <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>518.229.5770</small>
-          <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+          <!-- <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small> -->
         </div>
       </div>
       <div class="col-lg-4 text-center text-lg-end">
@@ -37,12 +37,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-          <a href="#" class="nav-link nav-item active" data-bs-toggle="dropdown">Home</a>
-          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
-            (keypress)="about()" class="nav-link nav-item">About</a>
+          <a (click)="scrollUp()" (keypress)="scrollUp()" class="nav-link nav-item active"
+            data-bs-toggle="dropdown">Home</a>
   
           <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
             (keypress)="services()" class="nav-link nav-item">Service</a>
+          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="performance" (click)="performance()"
+            (keypress)="performance()" class="nav-link nav-item">Our Performance</a>
+          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="whyUs" (click)="whyUs()"
+            (keypress)="whyUs()" class="nav-link nav-item">Why Us?</a>
           <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
             (keypress)="contact()" class="nav-link nav-item">Contact Us</a>
   
@@ -53,7 +56,7 @@
   <ngb-carousel *ngIf="images">
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img [src]="images[1]" alt="Random second slide" />
+        <img [src]="images[0]" alt="CACS slide 1" />
       </div>
       <div class="carousel-caption">
         <h1>Command and Control Solutions</h1>
@@ -70,7 +73,7 @@
     </ng-template>
     <ng-template ngbSlide>
       <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="Random first slide" />
+        <img [src]="images[1]" alt="CACS second slide" />
       </div>
       <div class="carousel-caption">
         <h1>Command and Control Solutions</h1>
@@ -141,21 +144,12 @@
     </div>
   </div>
   <hr class="mx-auto">
-  <div class="container-fluid py-5" id="growth">
+  <div class="container-fluid py-5" id="performance">
     <div class="container py-5">
       <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
         <h1 class="text-primary text-uppercase">Our Past Performance</h1>
       </div>
       <app-growth></app-growth>
-    </div>
-  </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5 ">
-    <div class="container py-5">
-      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="fw-bold text-primary text-uppercase">What makes us unique?</h1>
-      </div>
-      <app-differentiators></app-differentiators>
     </div>
   </div>
   <hr class="mx-auto">
@@ -238,6 +232,15 @@
     </div>
   </div>
   <hr class="mx-auto">
+  <div class="container-fluid py-5 " id="whyUs">
+    <div class="container py-5">
+      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+        <h1 class="fw-bold text-primary text-uppercase">What makes us unique?</h1>
+      </div>
+      <app-differentiators></app-differentiators>
+    </div>
+  </div>
+  <hr class="mx-auto">
   <div class="container-fluid py-5 " id="contact">
     <div class="container py-5">
       <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
@@ -246,3 +249,4 @@
       <app-contactus></app-contactus>
     </div>
   </div>
+  <a (click)="scrollUp()" (keypress)="scrollUp()"  class="btn btn-lg btn-primary btn-lg-square rounded back-to-top" id="back-to-top" [style]="displayScroller ? 'display: inline;' : 'display: none'"><i class="bi bi-arrow-up"></i></a>
