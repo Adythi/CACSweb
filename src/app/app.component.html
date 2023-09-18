@@ -1,252 +1,252 @@
 <!-- <router-outlet></router-outlet> -->
 <!-- <div class="container-fluid position-relative p-0"> -->
-  <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-    <div class="row gx-0">
-      <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-        <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <!-- <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small> -->
-          <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>888.688.0440</small>
-          <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>518.229.5770</small>
-          <!-- <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small> -->
-        </div>
+<div class="container-fluid bg-dark px-5 d-none d-lg-block">
+  <div class="row gx-0">
+    <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+      <div class="d-inline-flex align-items-center" style="height: 45px;">
+        <!-- <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small> -->
+        <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>888.688.0440</small>
+        <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>518.229.5770</small>
+        <!-- <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small> -->
       </div>
-      <div class="col-lg-4 text-center text-lg-end">
-        <div class="d-inline-flex align-items-center" style="height: 45px;">
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
-              class="fab fa-twitter fw-normal"></i></a>
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
-              class="fab fa-facebook-f fw-normal"></i></a>
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
-              class="fab fa-linkedin-in fw-normal"></i></a>
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
-              class="fab fa-instagram fw-normal"></i></a>
-          <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
-              class="fab fa-youtube fw-normal"></i></a>
-        </div>
+    </div>
+    <div class="col-lg-4 text-center text-lg-end">
+      <div class="d-inline-flex align-items-center" style="height: 45px;">
+        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+            class="fab fa-twitter fw-normal"></i></a>
+        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+            class="fab fa-facebook-f fw-normal"></i></a>
+        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+            class="fab fa-linkedin-in fw-normal"></i></a>
+        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i
+            class="fab fa-instagram fw-normal"></i></a>
+        <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i
+            class="fab fa-youtube fw-normal"></i></a>
       </div>
     </div>
   </div>
-  <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
-      [ngClass]="{'sticky-top shadow-sm':stickNavBar}" #header>
-      <a href="" class="navbar-brand p-0">
-        <h1 class="m-0"><img src="assets/img/logo-cacs.png"> CACS</h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-0">
-          <a (click)="scrollUp()" (keypress)="scrollUp()" class="nav-link nav-item active"
-            data-bs-toggle="dropdown">Home</a>
-  
-          <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
-            (keypress)="services()" class="nav-link nav-item">Service</a>
-          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="performance" (click)="performance()"
-            (keypress)="performance()" class="nav-link nav-item">Our Performance</a>
-          <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="whyUs" (click)="whyUs()"
-            (keypress)="whyUs()" class="nav-link nav-item">Why Us?</a>
-          <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
-            (keypress)="contact()" class="nav-link nav-item">Contact Us</a>
-  
-        </div>
-      </div>
-    </nav>
-  </div>
-  <ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[0]" alt="CACS slide 1" />
-      </div>
-      <div class="carousel-caption">
-        <h1>Command and Control Solutions</h1>
-        <span>
-          <h3><i class="fas fa-check-square"></i> EXPERIENCED <i class="fas fa-check-square" style="margin-left: 2%;"></i>
-            KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
-            RESPONSIVE</h3>
-        </span>
-        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
-          class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
-        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
-          class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
-      </div>
-    </ng-template>
-    <ng-template ngbSlide>
-      <div class="picsum-img-wrapper">
-        <img [src]="images[1]" alt="CACS second slide" />
-      </div>
-      <div class="carousel-caption">
-        <h1>Command and Control Solutions</h1>
-        <h3>A service disabled veteran owned business</h3>
-        <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
-          class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
-        <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
-          class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
-      </div>
-    </ng-template>
-  </ngb-carousel>
-  <div class="container-fluid py-5" id="about">
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-7">
-          <div class="section-title-1 position-relative pb-3 mb-5">
-            <h1 class="text-primary text-uppercase">About Us</h1>
-            <h2 class="mb-0">The Best IT Solution With Vast Experience</h2>
-          </div>
-          <p class="mb-4">At Command and Control Solutions Corp., based in New York's Tech Valley, we're
-            pioneers in delivering innovative and strategic technology services and solutions.
-            Focusing on reliability, security, and cost-effectiveness, and with a diverse client
-            base spanning small businesses to federal enterprises, our broad spectrum of
-            services, from executive consulting and IT strategy alignment to advanced
-            cybersecurity and infrastructure management, have provided outstanding results
-            for over thirteen years. Underpinned by a team of highly-skilled professionals
-            and led by our CEO and COO executive leaders, both US Military Academy West
-            Point graduates, we're committed to transparent, flawless excellence in project
-            execution and outstanding customer satisfaction. Entrust us to be your partner in
-            command of your technology solution and control of your IT infrastructure.</p>
-          <!-- <div class="row g-0 mb-3">
-            <div class="col-sm-6">
-              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
-              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
-            </div>
-            <div class="col-sm-6 ">
-              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
-              <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
-            </div>
-          </div>
-          <div class="d-flex align-items-center mb-4">
-            <div class="bg-primary d-flex align-items-center justify-content-center rounded"
-              style="width: 60px; height: 60px;">
-              <i class="fa fa-phone-alt text-white"></i>
-            </div>
-            <div class="ps-4">
-              <h5 class="mb-2">Call to ask any question</h5>
-              <h4 class="text-primary mb-0">(518) 229-5770 or (888) 688-0440</h4>
-            </div>
-          </div> -->
-        </div>
-        <div class="col-lg-5">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
-          </div>
-        </div>
+</div>
+<div class="container-fluid position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+    [ngClass]="{'sticky-top shadow-sm':stickNavBar}" #header>
+    <a href="" class="navbar-brand p-0">
+      <h1 class="m-0"><img src="assets/img/logo-cacs.png"> CACS</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto py-0">
+        <a (click)="scrollUp()" (keypress)="scrollUp()" class="nav-link nav-item active"
+          data-bs-toggle="dropdown">Home</a>
+
+        <a id="service_link" routerLink="/" [queryParams]="pathParams" fragment="services" (click)="services()"
+          (keypress)="services()" class="nav-link nav-item">Service</a>
+        <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="performance" (click)="performance()"
+          (keypress)="performance()" class="nav-link nav-item">Our Performance</a>
+        <a id="about_link" routerLink="/" [queryParams]="pathParams" fragment="whyUs" (click)="whyUs()"
+          (keypress)="whyUs()" class="nav-link nav-item">Why Us?</a>
+        <a id="contact_link" routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+          (keypress)="contact()" class="nav-link nav-item">Contact Us</a>
+
       </div>
     </div>
-  </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5" id="services">
-    <div class="container py-5">
-      <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="text-primary text-uppercase">Our Services</h1>
-        <h2 class="mb-0">Custom IT Solutions for Your Successful Business</h2>
-      </div>
-      <app-cards></app-cards>
+  </nav>
+</div>
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="CACS slide 1" />
     </div>
-  </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5" id="performance">
-    <div class="container py-5">
-      <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="text-primary text-uppercase">Our Past Performance</h1>
-      </div>
-      <app-growth></app-growth>
+    <div class="carousel-caption">
+      <h1>Command and Control Solutions</h1>
+      <span>
+        <h3><i class="fas fa-check-square"></i> EXPERIENCED <i class="fas fa-check-square" style="margin-left: 2%;"></i>
+          KNOWLEDGEABLE <i style="margin-left: 2%;" class="fas fa-check-square"></i>
+          RESPONSIVE</h3>
+      </span>
+      <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+        class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+      <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+        class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
     </div>
-  </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5 ">
-    <div class="container py-5">
-      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="fw-bold text-primary text-uppercase">Past Performance</h1>
-      </div>
-      <div class="container story position-relative">
-        <div class="row mb-5 ">
-          <div class="col-12 text-md-center">
-            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Now</div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="CACS second slide" />
+    </div>
+    <div class="carousel-caption">
+      <h1>Command and Control Solutions</h1>
+      <h3>A service disabled veteran owned business</h3>
+      <button routerLink="/" [queryParams]="pathParams" fragment="about" (click)="about()"
+        class="btn btn-primary py-md-3 mt-5 px-md-5 me-3 animated slideInLeft" id="read_more">Read More</button>
+      <button routerLink="/" [queryParams]="pathParams" fragment="contact" (click)="contact()"
+        class="btn btn-outline-light py-md-3 mt-5 px-md-5 animated slideInRight" id="contact_us">Contact Us</button>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<div class="container-fluid py-5" id="about">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-7">
+        <div class="section-title-1 position-relative pb-3 mb-5">
+          <h1 class="text-primary text-uppercase">About Us</h1>
+          <h2 class="mb-0">The Best IT Solution With Vast Experience</h2>
+        </div>
+        <p class="mb-4">At Command and Control Solutions Corp., based in New York's Tech Valley, we're
+          pioneers in delivering innovative and strategic technology services and solutions.
+          Focusing on reliability, security, and cost-effectiveness, and with a diverse client
+          base spanning small businesses to federal enterprises, our broad spectrum of
+          services, from executive consulting and IT strategy alignment to advanced
+          cybersecurity and infrastructure management, have provided outstanding results
+          for over thirteen years. Underpinned by a team of highly-skilled professionals
+          and led by our CEO and COO executive leaders, both US Military Academy West
+          Point graduates, we're committed to transparent, flawless excellence in project
+          execution and outstanding customer satisfaction. Entrust us to be your partner in
+          command of your technology solution and control of your IT infrastructure.</p>
+        <!-- <div class="row g-0 mb-3">
+          <div class="col-sm-6">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Award Winning</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Professional Staff</h5>
+          </div>
+          <div class="col-sm-6 ">
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>24/7 Support</h5>
+            <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Fair Prices</h5>
           </div>
         </div>
-        <div class="row gx-5 story-right position-relative mb-5 ">
-          <div class="col-md-6 text-md-end">
-            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[0].years}}</h6>
+        <div class="d-flex align-items-center mb-4">
+          <div class="bg-primary d-flex align-items-center justify-content-center rounded"
+            style="width: 60px; height: 60px;">
+            <i class="fa fa-phone-alt text-white"></i>
           </div>
-          <div class="col-md-6">
-            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4><img class="img-fluid rounded" src="{{pastperformance[0].images}}"
-                  style="width: 60px; height: 60px;">{{pastperformance[0].heading}}</h4>
-              <p class="m-0"><b>VALUE: </b>{{pastperformance[0].value}}</p>
-              <p class="m-0">{{pastperformance[0].details}}</p>
-            </div>
-          </div>
-        </div>
-        <div class="row gx-5 story-left position-relative mb-5 ">
-          <div class="col-md-6 text-md-end">
-            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4>
-                <img class="img-fluid rounded" src="{{pastperformance[1].images}}"
-                  style="width: 60px; height: 60px;float: right;margin-left: 2%;">{{pastperformance[1].heading}}
-              </h4>
-              <p class="m-0"><b>VALUE: </b>{{pastperformance[1].value}}</p>
-              <p class="m-0">{{pastperformance[1].details}}</p>
-            </div>
-          </div>
-          <div class="col-md-6 d-none d-md-block">
-            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[1].years}}</h6>
-          </div>
-        </div>
-        <!-- <div class="row mb-5 ">
-          <div class="col-12 text-md-center">
-            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">2020</div>
+          <div class="ps-4">
+            <h5 class="mb-2">Call to ask any question</h5>
+            <h4 class="text-primary mb-0">(518) 229-5770 or (888) 688-0440</h4>
           </div>
         </div> -->
-        <div class="row gx-5 story-right position-relative mb-5 ">
-          <div class="col-md-6 text-md-end">
-            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[2].years}}</h6>
-          </div>
-          <div class="col-md-6">
-            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4><img class="img-fluid rounded" src="{{pastperformance[2].images}}"
-                  style="width: 60px; height: 60px; margin-right: 2%;">{{pastperformance[2].heading}}</h4>
-              <p class="m-0"><b>VALUE: </b>{{pastperformance[2].value}}</p>
-              <p class="m-0">{{pastperformance[2].details}}</p>
-            </div>
-          </div>
-        </div>
-        <div class="row gx-5 story-left position-relative mb-5 ">
-          <div class="col-md-6 text-md-end">
-            <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-              <h4><img class="img-fluid rounded" src="{{pastperformance[3].images}}"
-                  style="width: 60px; height: 60px; float: right;margin-left: 2%;">{{pastperformance[3].heading}}</h4>
-              <p class="m-0"><b>VALUE: </b>{{pastperformance[3].value}}</p>
-              <p class="m-0">{{pastperformance[3].details}}</p>
-            </div>
-          </div>
-          <div class="col-md-6 d-none d-md-block">
-            <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[3].years}}</h6>
-          </div>
-        </div>
-        <div class="row mt-2">
-          <div class="col-12 text-md-center">
-            <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Launched</div>
-          </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="position-relative h-100">
+          <img class="position-absolute w-100 h-100 rounded" src="assets/img/about.jpg" style="object-fit: cover;">
         </div>
       </div>
     </div>
   </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5 " id="whyUs">
-    <div class="container py-5">
-      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="fw-bold text-primary text-uppercase">What makes us unique?</h1>
+</div>
+<hr class="mx-auto">
+<div class="container-fluid py-5" id="services">
+  <div class="container py-5">
+    <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h1 class="text-primary text-uppercase">Our Services</h1>
+      <h2 class="mb-0">Custom IT Solutions for Your Successful Business</h2>
+    </div>
+    <app-cards></app-cards>
+  </div>
+</div>
+<hr class="mx-auto">
+<div class="container-fluid py-5" id="performance">
+  <div class="container py-5">
+    <div class="section-title-1 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h1 class="text-primary text-uppercase">Our Past Performance</h1>
+    </div>
+    <app-growth></app-growth>
+  </div>
+</div>
+<hr class="mx-auto">
+<div class="container-fluid py-5 ">
+  <div class="container py-5">
+    <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h1 class="fw-bold text-primary text-uppercase">Past Performance</h1>
+    </div>
+    <div class="container story position-relative">
+      <div class="row mb-5 ">
+        <div class="col-12 text-md-center">
+          <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Now</div>
+        </div>
       </div>
-      <app-differentiators></app-differentiators>
+      <div class="row gx-5 story-right position-relative mb-5 ">
+        <div class="col-md-6 text-md-end">
+          <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[0].years}}</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+            <h4><img class="img-fluid rounded" src="{{pastperformance[0].images}}"
+                style="width: 60px; height: 60px;">{{pastperformance[0].heading}}</h4>
+            <p class="m-0"><b>VALUE: </b>{{pastperformance[0].value}}</p>
+            <p class="m-0">{{pastperformance[0].details}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5 story-left position-relative mb-5 ">
+        <div class="col-md-6 text-md-end">
+          <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+            <h4>
+              <img class="img-fluid rounded" src="{{pastperformance[1].images}}"
+                style="width: 60px; height: 60px;float: right;margin-left: 2%;">{{pastperformance[1].heading}}
+            </h4>
+            <p class="m-0"><b>VALUE: </b>{{pastperformance[1].value}}</p>
+            <p class="m-0">{{pastperformance[1].details}}</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+          <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[1].years}}</h6>
+        </div>
+      </div>
+      <!-- <div class="row mb-5 ">
+        <div class="col-12 text-md-center">
+          <div class="d-inline-block bg-primary text-white rounded py-2 px-4">2020</div>
+        </div>
+      </div> -->
+      <div class="row gx-5 story-right position-relative mb-5 ">
+        <div class="col-md-6 text-md-end">
+          <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[2].years}}</h6>
+        </div>
+        <div class="col-md-6">
+          <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+            <h4><img class="img-fluid rounded" src="{{pastperformance[2].images}}"
+                style="width: 60px; height: 60px; margin-right: 2%;">{{pastperformance[2].heading}}</h4>
+            <p class="m-0"><b>VALUE: </b>{{pastperformance[2].value}}</p>
+            <p class="m-0">{{pastperformance[2].details}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row gx-5 story-left position-relative mb-5 ">
+        <div class="col-md-6 text-md-end">
+          <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
+            <h4><img class="img-fluid rounded" src="{{pastperformance[3].images}}"
+                style="width: 60px; height: 60px; float: right;margin-left: 2%;">{{pastperformance[3].heading}}</h4>
+            <p class="m-0"><b>VALUE: </b>{{pastperformance[3].value}}</p>
+            <p class="m-0">{{pastperformance[3].details}}</p>
+          </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+          <h6 class="fw-bold mb-3 ms-3 ms-md-0">{{pastperformance[3].years}}</h6>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-12 text-md-center">
+          <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Launched</div>
+        </div>
+      </div>
     </div>
   </div>
-  <hr class="mx-auto">
-  <div class="container-fluid py-5 " id="contact">
-    <div class="container py-5">
-      <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-        <h1 class="fw-bold text-primary text-uppercase">Contact Us</h1>
-      </div>
-      <app-contactus></app-contactus>
+</div>
+<hr class="mx-auto">
+<div class="container-fluid py-5 " id="whyUs">
+  <div class="container py-5">
+    <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h1 class="fw-bold text-primary text-uppercase">What makes us unique?</h1>
     </div>
+    <app-differentiators></app-differentiators>
   </div>
-  <a (click)="scrollUp()" (keypress)="scrollUp()"  class="btn btn-lg btn-primary btn-lg-square rounded back-to-top" id="back-to-top" [style]="displayScroller ? 'display: inline;' : 'display: none'"><i class="bi bi-arrow-up"></i></a>
+</div>
+<hr class="mx-auto">
+<div class="container-fluid py-5 " id="contact">
+  <div class="container py-5">
+    <div class="section-title-2 text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+      <h1 class="fw-bold text-primary text-uppercase">Contact Us</h1>
+    </div>
+    <app-contactus></app-contactus>
+  </div>
+</div>
+<a (click)="scrollUp()" (keypress)="scrollUp()"  class="btn btn-lg btn-primary btn-lg-square rounded back-to-top" id="back-to-top" [style]="displayScroller ? 'display: inline;' : 'display: none'"><i class="bi bi-arrow-up"></i></a>
