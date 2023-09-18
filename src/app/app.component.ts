@@ -114,7 +114,7 @@ export class AppComponent {
     } else {
       this.stickNavBar=false;
     }
-    if (document.body.scrollTop >100  ||     
+    if (document.body.scrollTop > 100  ||     
       document.documentElement.scrollTop > 100) {
         this.displayScroller = true;
     } else {
