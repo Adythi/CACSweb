@@ -45,49 +45,49 @@
         </div>
     </div>
     <div class="col-lg-4 col-md-6">
-        <div class="card h-100 w-100 flex-column text-center card-info">
+        <div class="card h-100 w-100 flex-column text-center card-info wrapperLayout">
             <div class="card-content-wrapper w-100 h-100">
                 <div class="mt-5">
                     <h4 class="mb-3">Information Technology and Security</h4>
                 </div>
                 <div class="d-flex justify-content-center">
                     <ul class="m-0">
-                        <li *ngFor="let i of itList | slice:0:(moreIT? undefined: 3)">{{i}}</li>
+                        <li *ngFor="let i of itList | slice:0:(moreIT2? undefined: 3)">{{i}}</li>
                     </ul>
                 </div>
-                <button class="btn text-primary" (click)="moreIT =!moreIT" *ngIf="itList.length>3">{{moreIT?
+                <button class="btn text-primary" (click)="moreIT2 =!moreIT2" *ngIf="itList.length>3">{{moreIT2?
                     'less':'more'}}</button>
             </div>
         </div>
     </div>
     <div class="col-lg-4 col-md-6">
-        <div class="card h-100 w-100 flex-column text-center card-da">
+        <div class="card h-100 w-100 flex-column text-center card-da wrapperLayout">
             <div class="card-content-wrapper w-100 h-100">
                 <div class="mt-5">
                     <h4 class="mb-3">Data Management and Analytics</h4>
                 </div>
                 <div class="d-flex justify-content-center">
                     <ul class="m-0">
-                        <li *ngFor="let i of daLists | slice:0:(moreDA? undefined: 3)">{{i}}</li>
+                        <li *ngFor="let i of daLists | slice:0:(moreDA2? undefined: 3)">{{i}}</li>
                     </ul>
                 </div>
-                <button class="btn text-primary" (click)="moreDA =!moreDA" *ngIf="daLists.length>3">{{moreDA?
+                <button class="btn text-primary" (click)="moreDA2 =!moreDA2" *ngIf="daLists.length>3">{{moreDA2?
                     'less':'more'}}</button>
             </div>
         </div>
     </div>
     <div class="col-lg-4 col-md-6">
-        <div class="card h-100 w-100 flex-column text-center card-bi">
+        <div class="card h-100 w-100 flex-column text-center card-bi wrapperLayout">
             <div class="card-content-wrapper2 w-100 h-100">
                 <div class="mt-5">
                     <h4 class="mb-3">Business Improvement and Systems</h4>
                 </div>
                 <div class="d-flex justify-content-center">
                     <ul class="m-0">
-                        <li *ngFor="let i of bisList | slice:0:(moreBIS? undefined: 3)">{{i}}</li>
+                        <li *ngFor="let i of bisList | slice:0:(moreBIS2? undefined: 3)">{{i}}</li>
                     </ul>
                 </div>
-                <button class="btn text-primary" (click)="moreBIS =!moreBIS" *ngIf="bisList.length>3">{{moreBIS?
+                <button class="btn text-primary" (click)="moreBIS2 =!moreBIS2" *ngIf="bisList.length>3">{{moreBIS2?
                     'less':'more'}}</button>
             </div>
         </div>
