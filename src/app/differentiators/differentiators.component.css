@@ -1,0 +1,20 @@
+.differntiatorImage
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid purple;
+}
+div.diagonal-container {
+    width: 60%;
+    height: 553px;
+    margin: -233px 0px -242px 110px;
+  }
+  
+  .to-right {
+    background: linear-gradient(158deg, transparent calc(50% - 1px), purple 50%, transparent calc(50% + 1px) );
+  }
+  
+  .to-left {
+    background: linear-gradient(23deg, transparent calc(50% - 1px), purple 50%, transparent calc(50% + 1px) );
+  }

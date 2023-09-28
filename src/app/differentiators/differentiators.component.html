@@ -1,100 +1,37 @@
-<div class="container story position-relative">
-    <div class="row mb-5 ">
-      <div class="col-12 text-md-center">
-        <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Why us?</div>
-      </div>
-    </div>
-    <div class="row gx-5 story-right position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jun, 2021</h6> -->
-        <!-- <h4>Value Driven Technology Solutions</h4> -->
-      </div>
-      <div class="col-md-6">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Value Driven Technology Solutions</h4>
-          <p class="m-0">Extreme focus on customer
-            requirements with unique skills for creating value based upon innovative
-            solutions.</p>
+  <div class="container" style="width: 50%;">
+    <div *ngFor="let item of differentiatorContentArray; index as i">
+      <div class="row">
+        <div [ngClass]=" i%2!=0 ? 'col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9' : 'col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3'">
+          <div *ngIf="i%2==0">
+            <img class="differntiatorImage" src="{{differentiatorContentArray[i].logo}}">
+          </div>
+          <div *ngIf="i%2!=0" style="text-align: center;">
+            <p style="text-align: left; margin: 0px 0px 0px 56px; font-weight: 700;">
+              {{differentiatorContentArray[i].title}}
+            </p>
+            <p style="text-align: left; margin: 0px 0px 0 -100px; width: 92%;">
+              {{differentiatorContentArray[i].content}}
+            </p>
+          </div>
+          
         </div>
-      </div>
-    </div>
-    <div class="row gx-5 story-left position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Veteran Leadership</h4>
-          <p class="m-0">Guided by our West Point Graduates, both our CEO
-            (Anthony DiNallo) and COO uphold disciplined values for rigorous solutions
-            and unwavering commitment.</p>
+        
+        <div [ngClass]=" i%2!=0 ? 'col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3' : 'col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9'">
+          <div *ngIf="i%2!=0">
+            <img class="differntiatorImage" src="{{differentiatorContentArray[i].logo}}">
+          </div>
+          <div *ngIf="i%2==0" style="text-align: center;">
+            <p style="text-align: right; margin: 0px 80px 0 0; font-weight: 700;">
+              {{differentiatorContentArray[i].title}}
+            </p>
+            <p style="text-align: left; width: 92%; margin: 0px 0px 0px 145px;">
+              {{differentiatorContentArray[i].content}}
+            </p>
+          </div>
+          
         </div>
-      </div>
-      <div class="col-md-6 d-none d-md-block">
-        <!-- <h4>Veteran Leadership</h4> -->
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jan, 2021</h6> -->
-      </div>
-    </div>
-    <!-- <div class="row mb-5 ">
-      <div class="col-12 text-md-center">
-        <div class="d-inline-block bg-primary text-white rounded py-2 px-4">2020</div>
-      </div>
-    </div> -->
-    <div class="row gx-5 story-right position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jun, 2020</h6> -->
-        <!-- <h4>Diverse Client Portfolio</h4> -->
-      </div>
-      <div class="col-md-6">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Diverse Client Portfolio</h4>
-          <p class="m-0">Serving all businesses sizes and government
-            entities, our broad expertise allows adaptable solutions for various sectors
-            and scales.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row gx-5 story-left position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Continuous Skill Enhancement</h4>
-          <p class="m-0">Emphasis on ongoing training keeps our
-            team ahead in tech, ready to tackle emerging challenges.</p>
-        </div>
-      </div>
-      <div class="col-md-6 d-block d-md-none">
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jan, 2020</h6> -->
-        <!-- <h4>Continuous Skill Enhancement</h4> -->
-      </div>
-    </div>
-    <div class="row gx-5 story-right position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <!-- <h4>Holistic Technology Solutions</h4> -->
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jun, 2019</h6> -->
-      </div>
-      <div class="col-md-6">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Holistic Technology Solutions</h4>
-          <p class="m-0">Offering comprehensive services from
-            consultation to infrastructure management, clients benefit from an allencompassing
-            solution hub.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="row gx-5 story-left position-relative mb-5 ">
-      <div class="col-md-6 text-md-end">
-        <div class="story-text position-relative d-inline-block bg-light p-4 ms-3 ms-md-0">
-          <h4>Customer-Centric Approach</h4>
-          <p class="m-0">Centered on client satisfaction, our mindset
-            fosters enduring partnerships built on trust and tailored attention.</p>
-        </div>
-      </div>
-      <div class="col-md-6 d-block d-md-none">
-        <!-- <h6 class="fw-bold mb-3 ms-3 ms-md-0">01 Jan, 2020</h6> -->
-        <!-- <h4>Customer-Centric Approach</h4> -->
-      </div>
-    </div>
-    <div class="row " >
-      <div class="col-12 text-md-center">
-        <div class="d-inline-block bg-primary text-white rounded py-2 px-4">Like us?</div>
+        <div *ngIf="i%2==0 && ((i+1)!=differentiatorContentArray.length)" class="diagonal-container to-left"></div>
+        <div *ngIf="i%2!=0 && ((i+1)!=differentiatorContentArray.length)" class="diagonal-container to-right"></div>        
       </div>
     </div>
   </div>
